@@ -1,3 +1,17 @@
+@keyframes figure-rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/*.rotation {
+  animation: figure-rotation 20s linear infinite;
+}*/
+
+
 .page {
   min-width: 1100px;
   /* мы ещё не умеем делать мобильную версию сайта, */
@@ -21,6 +35,7 @@
   flex-wrap: wrap;
   position: relative;
   background-color: #f2f2f2;
+  overflow: hidden;
 }
 
 .logo {
@@ -57,11 +72,16 @@
   font-weight: 400;
   line-height: 25px;
   z-index: 3;
-}
+  }
 
 .header__link {
   color: #2f80ed;
   text-decoration: none;
+}
+
+.header__link:hover {
+  opacity: 0.6;
+  transition: opasity 2s linear;
 }
 
 /* ниже мы привели пример двух селекторов, чтобы вы вспомнили запись элемента */
@@ -216,6 +236,93 @@
 .table__text:last-of-type {
   margin-bottom: 0;
 }
+
+/*section techniques*/
+
+.techniques {
+  margin: 0 auto;
+  width: 80%;
+  display: flex;
+  padding: 100px 0 0 0;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
+}
+
+.cards {
+  padding: 0;
+  margin: 0;
+  width: 920px;
+  box-sizing: border-box;
+  display: flex;
+  flex-wrap: wrap;
+ list-style: none;
+  column-gap: 100px;
+
+  }
+
+  .cards__item {
+    margin-top: 60px;
+
+  }
+
+  .cards__image {
+    width: 160px;
+    height: 160px;
+    margin: 0 40px 43px;
+    border-radius: 100%;
+  }
+
+  .cards__title {
+margin: 0;
+padding: 0;
+text-align: center;
+line-height: 1.15;
+font-size: 24px;
+font-weight: 600;
+margin: 0 0 16px 0;
+width: 240px;
+  }
+
+  .cards__description {
+    margin: 0;
+    padding: 0;
+   width: 240px;
+    text-align: center;
+    line-height: 23px;
+    font-size: 18px;
+    font-weight: 400;
+
+  }
+
+  /*section video*/
+.video {
+  margin: 0;
+    display: flex;
+  padding: 100px 0 0 0;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
+
+}
+
+  .video__iframes {
+padding: 0;
+    margin: 50px auto 0;
+
+  }
+
+  .video__iframe {
+padding: 0;
+    margin: 0;
+    border: none;
+    margin-right: 20px;
+      }
+
+      .video__iframe :last-of-type {
+        margin-right: 0;
+      }
+
 
 /*section faynman*/
 
